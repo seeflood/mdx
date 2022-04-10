@@ -20,8 +20,13 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 set -euo pipefail  # Strict mode
-mdsh-compile-shell_background() { printf 'nohup %s & \n sleep 1s \n' "$(echo $1)"; }
+
+# some pre-defined things
+export project_path=$(pwd)
+mdsh-compile-if.not.exit(){ printf "my_arr=($(echo %s | tr " " "\n")) ; if test ! -e \${my_arr[2]} ;then %s fi \n" "$2" "$1"; }
+mdsh-compile-background() { printf 'nohup %s & \n sleep 2s \n' "$(echo $1)"; }
 mdsh:file-header(){ printf 'set \-e \n';}
+
 # belows are mdsh code
 mdsh-parse() {
 	local cmd=$1 lno=0 block_start lang mdsh_block ln indent fence close_fence indent_remove
