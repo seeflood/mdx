@@ -23,7 +23,8 @@ set -euo pipefail  # Strict mode
 
 # some pre-defined things
 export project_path=$(pwd)
-mdsh-compile-if.not.exit(){ printf "my_arr=($(echo %s | tr " " "\n")) ; if test ! -e \${my_arr[2]} ;then %s fi \n" "$2" "$1"; }
+mdsh-compile-if.exist(){ printf "my_arr=($(echo %s | tr " " "\n")) ; if test -e \${my_arr[2]} ;then %s fi \n" "$2" "$1"; }
+mdsh-compile-if.not.exist(){ printf "my_arr=($(echo %s | tr " " "\n")) ; if test ! -e \${my_arr[2]} ;then %s fi \n" "$2" "$1"; }
 mdsh-compile-background() { printf 'nohup %s & \n sleep 2s \n' "$(echo $1)"; }
 mdsh:file-header(){ printf 'set \-e \n';}
 
