@@ -144,6 +144,42 @@ cd ${project_path}
 ```
 ~~~
 
+### @catch
+By default, any error will stop the execution.
+
+If you want to tolerant errors when running some script, you can add a `@catch`.
+
+For example, see [catch.md](catch.md):
+~~~markdown
+Here is a typo. We will catch and ignore the error:
+
+```shell @catch
+echoo "xxx"
+```
+
+Here is the correct one:
+
+```shell
+echo "xxx"
+```
+
+Here is another command with typo, but we won't catch the error this time, and it will interrupt the execution.
+
+```shell
+echoo "This command will interrupt the execution"
+```
+
+Here is another correct command.It won't be executed because the above error have already interrupted the execution.
+
+```shell
+echo "This command won't be executed"
+```
+~~~
+
+Run this file and see what will happen:
+```shell
+mdx catch.md
+```
 ### Ignore some script
 If you don't want to run some script blocks, you can use some other "tag" for it.
 For example:
