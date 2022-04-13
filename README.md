@@ -113,7 +113,8 @@ Run Layotto:
 
 It will be compiled to:
 ```
-nohup ./layotto start -c ../../configs/config_in_memory.json & 
+nohup ./layotto start -c ../../configs/config_in_memory.json &
+sleep 2s
 ```
 
 ### @if.not.exist
