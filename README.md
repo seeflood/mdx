@@ -67,7 +67,7 @@ Demo success!
 ```
 ~~~
 
-And then run this file:
+You can "run" this file and see what will happen:
 ```shell
 mdx quickstart.md
 ```
@@ -142,6 +142,21 @@ If you have switched directories many times and want to go back to the beginning
 ~~~markdown
 ```shell
 cd ${project_path}
+```
+~~~
+
+### @cd
+You can use @cd to change directory before running the script.
+For example:
+~~~markdown
+```shell
+cd aaa/ccc
+```
+
+go back to aaa/bbb:
+
+```shell @cd ${project_path}
+cd aaa/bbb
 ```
 ~~~
 
