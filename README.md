@@ -117,6 +117,22 @@ nohup ./layotto start -c ../../configs/config_in_memory.json &
 sleep 2s
 ```
 
+### @background.sleep 5s
+The `@background` command will sleep 2s by default. You can customize the sleep time:
+~~~markdown
+Run Layotto:
+
+```shell @background.sleep 5s
+./layotto start -c ../../configs/config_in_memory.json
+```
+~~~
+
+It will be compiled to:
+```
+nohup ./layotto start -c ../../configs/config_in_memory.json &
+sleep 5s
+```
+
 ### @if.not.exist
 In some scenarios, you want to "compile the project if there is no compiled binary file".
 
