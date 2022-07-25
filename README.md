@@ -38,9 +38,17 @@ echoooo "typooo"
 ~~~
 
 
-You can "run" this file and see what will happen:
+You can "run" this file:
 ```shell
 mdx helloworld.md
+```
+
+The following message will be printed out:
+
+```bash
+hello
+world
+: line 3: echoooo: command not found
 ```
 
 ### Example 2
