@@ -13,7 +13,7 @@ chmod +x mdx
 2. Move it to a directory on your PATH
 ## Examples
 ### Example 1
-Let's say we have a [helloworld.md](heloworld.md) :
+Let's say we have a [helloworld.md](helloworld.md) :
 
 ~~~markdown
 This example prints "hello"
