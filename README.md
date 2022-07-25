@@ -12,7 +12,39 @@ chmod +x mdx
 
 2. Move it to a directory on your PATH
 ## Examples
-Let's say we have a quickstart.md:
+### Example 1
+Let's say we have a [helloworld.md](heloworld.md) :
+
+~~~markdown
+This example prints "hello"
+
+```shell
+echo "hello"
+```
+
+This example prints "world"
+
+```shell
+echo "world"
+```
+
+This example exits with an error!
+
+So sad!
+
+```shell
+echoooo "typooo"
+```
+~~~
+
+
+You can "run" this file and see what will happen:
+```shell
+mdx helloworld.md
+```
+
+### Example 2
+Let's say we have a [quickstart.md](quickstart.md) :
 
 ~~~markdown
 ## Start Layotto
@@ -25,7 +57,7 @@ git clone https://github.com/mosn/layotto.git
 Change directory:
 
 ```shell
-cd cd layotto/cmd/layotto
+cd layotto/cmd/layotto
 ```
 
 Build:
@@ -43,9 +75,9 @@ Run Layotto:
 ## Run Demo
 
 ```shell
-cd ${project_path}/demo/sequencer/in-memory/
+ cd ${project_path}/demo/sequencer/common/
  go build -o client
- ./client
+ ./client -s "sequencer_demo"
 ```
 
 And you will see:
@@ -72,24 +104,6 @@ You can "run" this file and see what will happen:
 mdx quickstart.md
 ```
 
-It's equivalent to run the command below:
-
-```bash
-set \-e 
-git clone https://github.com/mosn/layotto.git
-cd cd layotto/cmd/layotto
-my_arr=(shell @if.not.exist layotto)
-if test ! -e ${my_arr[2]}
-then go build
-fi 
-
-nohup ./layotto start -c ../../configs/config_in_memory.json & 
-sleep 2s 
-cd ${project_path}/demo/sequencer/in-memory/
-go build -o client
-./client
-```
-
 ## Usage
 This tool run the script in 
 ~~~
@@ -98,6 +112,8 @@ This tool run the script in
 ```
 ~~~
 blocks.
+
+It also provides you with some "annotations" which make it easier to write a "runnable" markdown file, including:
 
 ### @background
 If you want to run a command as a background job, you can add an `@background` to the shell tag.

@@ -8,7 +8,7 @@ git clone https://github.com/mosn/layotto.git
 Change directory:
 
 ```shell
-cd cd layotto/cmd/layotto
+cd layotto/cmd/layotto
 ```
 
 Build:
@@ -26,9 +26,9 @@ Run Layotto:
 ## Run Demo
 
 ```shell
-cd ${project_path}/demo/sequencer/in-memory/
+ cd ${project_path}/demo/sequencer/common/
  go build -o client
- ./client
+ ./client -s "sequencer_demo"
 ```
 
 And you will see:
