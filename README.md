@@ -1,8 +1,6 @@
 # mdx
 mdx can run the shell scripts in your markdown files.
 
-mdx is [mdsh](https://github.com/bashup/mdsh) with some pre-defined "annotations" which make it easier to write a "runnable" markdown file. So, most of code in this repo is copied from [mdsh](https://github.com/bashup/mdsh) ,and you can check mdsh for more details.
-
 ## Installation
 1. chmod +x
 
@@ -292,3 +290,7 @@ You can run it and see what happened:
 ```shell
 mdx hidden.md
 ```
+
+## Credits
+mdx is [mdsh](https://github.com/bashup/mdsh) with some pre-defined "annotations" which make it easier to write a "runnable" markdown file. 
+So, a lot of shell script in this repo is copied from [mdsh](https://github.com/bashup/mdsh) ,and you can check mdsh for more details.
