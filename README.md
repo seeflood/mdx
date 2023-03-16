@@ -9,6 +9,7 @@ chmod +x mdx
 ```
 
 2. Move it to a directory on your PATH
+
 ## Examples
 ### Example 1
 Let's say we have a [helloworld.md](helloworld.md) :
@@ -36,11 +37,12 @@ echoooo "typooo"
 ~~~
 
 
-You can "run" this file:
+You can "run" this markdown file:
 ```shell
 mdx helloworld.md
 ```
 
+This command will run all the shell scripts in the `helloworld.md`.
 The following message will be printed out:
 
 ```bash
